@@ -18,7 +18,6 @@ public class MarsCar {
         this.direction = marsPosition.getDirection();
     }
 
-
     public void execute(List<String> args) {
         for(int index = 0; index < args.size(); index ++) {
             int nowPos = directions.indexOf(direction);
