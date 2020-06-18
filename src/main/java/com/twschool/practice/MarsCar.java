@@ -23,34 +23,34 @@ public class MarsCar {
         for(int index = 0; index < args.size(); index ++) {
             int nowPos = directions.indexOf(direction);
             String command = args.get(index);
-            if (command == "M") {
-                if (direction == "N") {
+            if (command.equals("M")) {
+                if (direction.equals("N")) {
                     coordinatesY += 1;
                 }
 
-                if (direction == "W") {
+                if (direction.equals("W")) {
                     coordinatesX -= 1;
                 }
 
-                if (direction == "S") {
+                if (direction.equals("S")) {
                     coordinatesY -= 1;
                 }
 
-                if (direction == "E") {
+                if (direction.equals("E")) {
                     coordinatesX += 1;
                 }
 
                 continue;
             }
 
-            if (command == "L") {
+            if (command.equals("L")) {
                 nowPos = nowPos + 1;
 
                 if (nowPos > 3) {
                     nowPos = 0;
                 }
             }
-            if (command == "R") {
+            if (command.equals("R")) {
                 nowPos = nowPos - 1;
                 if (nowPos < 0) {
                     nowPos = 3;
