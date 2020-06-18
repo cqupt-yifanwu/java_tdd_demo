@@ -22,4 +22,10 @@ public class FizzBuzzTest {
         String res = fizzBuzz.say(5);
         Assert.assertEquals("Buzz", res);
     }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_given_number_105() {
+        String res = fizzBuzz.say(105);
+        Assert.assertEquals("FizzBuzzWhizz", res);
+    }
 }
