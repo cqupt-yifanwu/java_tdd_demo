@@ -32,6 +32,14 @@ public class MarsCar {
                     coordinatesX -= 1;
                 }
 
+                if (direction == "S") {
+                    coordinatesY -= 1;
+                }
+
+                if (direction == "E") {
+                    coordinatesX += 1;
+                }
+
                 continue;
             }
 
