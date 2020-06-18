@@ -2,26 +2,26 @@ package com.twschool.practice;
 
 public class FizzBuzz {
     public String say(int number) {
-        if (String.valueOf(number).contains("3")) {
+        if (!String.valueOf(number).contains("5") && String.valueOf(number).contains("3")) {
             return "Fizz";
         }
 
-        String str = "";
+        String result = "";
 
         if (number % 3 == 0) {
-            str += "Fizz";
+            result += "Fizz";
         }
 
         if (number % 5 == 0) {
-            str += "Buzz";
+            result += "Buzz";
         }
 
         if (number % 7 == 0) {
-            str += "Whizz";
+            result += "Whizz";
         }
 
-        if (!str.equals("")) {
-             return str;
+        if (!result.equals("")) {
+             return result;
         }
 
         return String.valueOf(number);
