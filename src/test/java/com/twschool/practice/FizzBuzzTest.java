@@ -26,7 +26,7 @@ public class FizzBuzzTest {
     @Test
     public void should_return_whizz_given_number_7() {
         String result = fizzBuzz.say(7);
-        Assert.assertEquals("whizz", result);
+        Assert.assertEquals("Whizz", result);
     }
 
     @Test
@@ -51,5 +51,11 @@ public class FizzBuzzTest {
     public void should_return_BuzzFizz_given_number_35() {
         String result = fizzBuzz.say(35);
         Assert.assertEquals("BuzzWhizz", result);
+    }
+
+    @Test
+    public void should_return_FizzBuzz_given_number_135() {
+        String result = fizzBuzz.say(135);
+        Assert.assertEquals("FizzBuzz", result);
     }
 }
