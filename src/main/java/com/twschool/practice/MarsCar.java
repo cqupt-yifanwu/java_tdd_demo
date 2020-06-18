@@ -19,32 +19,47 @@ public class MarsCar {
     }
 
 
-    public void execute(List args) {
+    public void execute(List<String> args) {
         for(int index = 0; index < args.size(); index ++) {
             int nowPos = directions.indexOf(direction);
-            if (args.get(index) == "L") {
+            String command = args.get(index);
+            if (command == "M") {
+                if (direction == "N") {
+                    coordinatesY += 1;
+                }
+
+                if (direction == "W") {
+                    coordinatesX -= 1;
+                }
+
+                continue;
+            }
+
+            if (command == "L") {
                 nowPos = nowPos + 1;
 
                 if (nowPos > 3) {
                     nowPos = 0;
                 }
-            } else {
+            }
+            if (command == "R") {
                 nowPos = nowPos - 1;
                 if (nowPos < 0) {
                     nowPos = 3;
                 }
             }
             direction = directions.get(nowPos);
+
         }
     }
 
 
     public int getX() {
-        return 0;
+        return coordinatesX;
     }
 
     public int getY() {
-        return 0;
+        return coordinatesY;
     }
 
     public String getDirection() {
