@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MarsCarTest {
     @Test
-    public void should_return_00W_given_00N_L() {
+    public void should_return_x_0_y_0_direction_W_given_x_0y_0_direcion_N_commonds_L() {
         MarsPosition marsPosition = new MarsPosition(0, 0, "N");
         MarsCar marsCar = new MarsCar(marsPosition);
 
@@ -24,7 +24,7 @@ public class MarsCarTest {
     }
 
     @Test
-    public void should_return_00E_given_00N_R() {
+    public void should_return_x_0_y_0_direction_E_given_x_0_y_0_directionN_commonds_R() {
         MarsPosition marsPosition = new MarsPosition(0,0,"N");
         MarsCar marsCar = new MarsCar(marsPosition);
 
@@ -38,7 +38,7 @@ public class MarsCarTest {
     }
 
     @Test
-    public void should_return_01N_given_00N_M() {
+    public void should_return_x_0_y_1_direction_N_given_x_0_y_0_direction_N_commonds_M() {
         MarsPosition marsPosition = new MarsPosition(0,0,"N");
         MarsCar marsCar = new MarsCar(marsPosition);
 
@@ -52,7 +52,7 @@ public class MarsCarTest {
     }
 
     @Test
-    public void should_return_noun10W_given_00W_M() {
+    public void should_return_x_noun1_y_0_direction_W_given_x_0y_0_directionW_commomnds_M() {
         MarsPosition marsPosition = new MarsPosition(0,0,"W");
         MarsCar marsCar = new MarsCar(marsPosition);
 
@@ -66,7 +66,7 @@ public class MarsCarTest {
     }
 
     @Test
-    public void should_return_0noun1S_given_00S_M() {
+    public void should_return_x_0_y_noun1_direction_S_given_x_0y_0_direction_S_commonds_M() {
         MarsPosition marsPosition = new MarsPosition(0,0,"S");
         MarsCar marsCar = new MarsCar(marsPosition);
 
@@ -79,7 +79,7 @@ public class MarsCarTest {
         Assert.assertEquals("S", marsCar.getDirection());
     }
     @Test
-    public void should_return_10E_given_00E_M() {
+    public void should_return_x_1_0_direction_E_given_x_0y_0_directionE_commonds_M() {
         MarsPosition marsPosition = new MarsPosition(0,0,"E");
         MarsCar marsCar = new MarsCar(marsPosition);
 
@@ -93,7 +93,7 @@ public class MarsCarTest {
     }
 
     @Test
-    public void should_return_03E_given_00E_MMMLMLM() {
+    public void should_return_x_0_y_3_direciton_E_given_x_0_y_0_direction_E_commonds_MMMLMLM() {
         MarsPosition marsPosition = new MarsPosition(0,0,"E");
         MarsCar marsCar = new MarsCar(marsPosition);
 
