@@ -16,4 +16,10 @@ public class FizzBuzzTest {
         String res = fizzBuzz.say(3);
         Assert.assertEquals("Fizz", res);
     }
+
+    @Test
+    public void should_return_buzz_given_number_5() {
+        String res = fizzBuzz.say(5);
+        Assert.assertEquals("Buzz", res);
+    }
 }
