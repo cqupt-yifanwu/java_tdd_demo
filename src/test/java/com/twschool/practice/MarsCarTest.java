@@ -91,4 +91,18 @@ public class MarsCarTest {
         Assert.assertEquals(0, marsCar.getY());
         Assert.assertEquals("E", marsCar.getDirection());
     }
+
+    @Test
+    public void should_return_03E_given_00E_MMMLMLM() {
+        MarsPosition marsPosition = new MarsPosition(0,0,"E");
+        MarsCar marsCar = new MarsCar(marsPosition);
+
+        List args = Arrays.asList("M", "M", "M", "L", "M", "L", "M");
+
+        marsCar.execute(args);
+
+        Assert.assertEquals(2, marsCar.getX());
+        Assert.assertEquals(1, marsCar.getY());
+        Assert.assertEquals("W", marsCar.getDirection());
+    }
 }
