@@ -28,4 +28,10 @@ public class FizzBuzzTest {
         String res = fizzBuzz.say(105);
         Assert.assertEquals("FizzBuzzWhizz", res);
     }
+
+    @Test
+    public void should_returnFizz_given_number_35() {
+        String res = fizzBuzz.say(35);
+        Assert.assertEquals("Fizz", res);
+    }
 }

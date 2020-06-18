@@ -2,7 +2,12 @@ package com.twschool.practice;
 
 public class FizzBuzz {
     public String say(int number) {
+        if (String.valueOf(number).contains("3")) {
+            return "Fizz";
+        }
+
         String str = "";
+
         if (number % 3 == 0) {
             str += "Fizz";
         }
