@@ -94,6 +94,20 @@ public class MarsCarTest {
     }
 
     @Test
+    public void should_return_x_0_y_0_direction_W_given_x_0_y_0_direction_S_commonds_R() {
+        MarsPosition marsPosition = new MarsPosition(0,0,"S");
+        MarsCar marsCar = new MarsCar(marsPosition);
+
+        List args = Arrays.asList("R");
+
+        marsCar.execute(args);
+
+        Assert.assertEquals(0, marsCar.getX());
+        Assert.assertEquals(0, marsCar.getY());
+        Assert.assertEquals("W", marsCar.getDirection());
+    }
+
+    @Test
     public void should_return_x_1_0_direction_E_given_x_0y_0_directionE_commonds_M() {
         MarsPosition marsPosition = new MarsPosition(0,0,"E");
         MarsCar marsCar = new MarsCar(marsPosition);
