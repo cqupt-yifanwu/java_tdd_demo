@@ -12,7 +12,7 @@ public class GeneratorTest {
     }
 
     @Test
-//    判断每一项都不相等
+//    判断每一项都不相等，不会重复出现
     public void should_return_number_diff_any_position_when_run_generator() {
         GameGenerator gameGenerator = new GameGenerator();
         String result = gameGenerator.getNumber();
