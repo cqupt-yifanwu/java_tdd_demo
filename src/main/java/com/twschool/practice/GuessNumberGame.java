@@ -2,16 +2,24 @@ package com.twschool.practice;
 
 public class GuessNumberGame {
     private final GameAnswer gameAnswer;
+    private GameStatus gameStatus;
 
     public GuessNumberGame(GameAnswer gameAnswer) {
         this.gameAnswer = gameAnswer;
     }
 
     public String guess(String userAnswerString) {
-        return "4A0B";
+        String result = gameAnswer.check(userAnswerString);
+        if ("4A0B".equals(result)) {
+            gameStatus = GameStatus.SUCCEED;
+        } else  {
+            gameStatus = GameStatus.CONTINUE;
+        }
+        return result;
     }
 
     public GameStatus getStatus(String result) {
-        return GameStatus.SUCCEED;
+
+        return gameStatus;
     }
 }
