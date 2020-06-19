@@ -5,7 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GameAnswer {
-    public String check(String gameAnswer, String userAnswer) {
+
+    private String gameAnswer;
+
+    public GameAnswer(String gameAnswer) {
+        this.gameAnswer = gameAnswer;
+    }
+
+    public String check(String userAnswer) {
         List<String> arrayUserAnswer = Arrays.asList(userAnswer.split(""));
         List<String> arrayGameAnswer = Arrays.asList(gameAnswer.split(""));
 
