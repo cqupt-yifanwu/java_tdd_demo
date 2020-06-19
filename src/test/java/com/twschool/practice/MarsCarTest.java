@@ -18,9 +18,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.W, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.W, marsPosition.getDirection());
     }
 
     @Test
@@ -32,9 +32,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.E, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.E, marsPosition.getDirection());
     }
 
     @Test
@@ -46,9 +46,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(1, marsCar.getY());
-        Assert.assertEquals(Direction.N, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(1, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.N, marsPosition.getDirection());
     }
 
     @Test
@@ -60,9 +60,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(-1, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.W, marsCar.getDirection());
+        Assert.assertEquals(-1, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.W, marsPosition.getDirection());
     }
 
     @Test
@@ -74,9 +74,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(-1, marsCar.getY());
-        Assert.assertEquals(Direction.S, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(-1, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.S, marsPosition.getDirection());
     }
 
     @Test
@@ -88,9 +88,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.E, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.E, marsPosition.getDirection());
     }
 
     @Test
@@ -102,9 +102,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.W, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.W, marsPosition.getDirection());
     }
 
     @Test
@@ -116,9 +116,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(1, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.E, marsCar.getDirection());
+        Assert.assertEquals(1, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.E, marsPosition.getDirection());
     }
 
     @Test
@@ -130,9 +130,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.N, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.N, marsPosition.getDirection());
     }
 
     @Test
@@ -144,9 +144,9 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(0, marsCar.getX());
-        Assert.assertEquals(0, marsCar.getY());
-        Assert.assertEquals(Direction.S, marsCar.getDirection());
+        Assert.assertEquals(0, marsPosition.getCoordinatesX());
+        Assert.assertEquals(0, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.S, marsPosition.getDirection());
     }
 
 
@@ -159,8 +159,8 @@ public class MarsCarTest {
 
         marsCar.execute(args);
 
-        Assert.assertEquals(2, marsCar.getX());
-        Assert.assertEquals(1, marsCar.getY());
-        Assert.assertEquals(Direction.W, marsCar.getDirection());
+        Assert.assertEquals(2, marsPosition.getCoordinatesX());
+        Assert.assertEquals(1, marsPosition.getCoordinatesY());
+        Assert.assertEquals(Direction.W, marsPosition.getDirection());
     }
 }

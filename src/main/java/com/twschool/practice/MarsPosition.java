@@ -2,14 +2,34 @@ package com.twschool.practice;
 
 public class MarsPosition {
 
-    private final int x;
-    private final int y;
-    private final Direction direction;
+    private int x;
+    private int y;
+    private Direction direction;
 
     public MarsPosition(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
+    }
+
+    public void changeCoordinatesY (String type) {
+        if ("add".equals(type)) {
+            y++;
+            return;
+        }
+        y--;
+    }
+
+    public void changeCoordinatesX (String type) {
+        if ("add".equals(type)) {
+            x++;
+            return;
+        }
+        x--;
+    }
+
+    public void setDirection (Direction dirction) {
+        this.direction = dirction;
     }
 
     public int getCoordinatesX() {
