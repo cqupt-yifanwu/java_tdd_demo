@@ -2,19 +2,29 @@ package com.twschool.practice;
 
 public class GuessNumberGame {
     private final GameAnswer gameAnswer;
-    private GameStatus gameStatus;
+    private GameStatus gameStatus = GameStatus.CONTINUE;
+    private int leftTryTimes = 6;
 
     public GuessNumberGame(GameAnswer gameAnswer) {
         this.gameAnswer = gameAnswer;
     }
 
-    public String guess(String userAnswerString) {
-        String result = gameAnswer.check(userAnswerString);
+    private void decreaseTryTimes() {
+        leftTryTimes --;
+    }
+
+    private void modifyStatus(String result) {
         if ("4A0B".equals(result)) {
             gameStatus = GameStatus.SUCCEED;
-        } else  {
-            gameStatus = GameStatus.CONTINUE;
+        } else if (leftTryTimes == 0) {
+            gameStatus = GameStatus.FAILED;
         }
+    }
+
+    public String guess(String userAnswerString) {
+        String result = gameAnswer.check(userAnswerString);
+        decreaseTryTimes();
+        modifyStatus(result);
         return result;
     }
 
