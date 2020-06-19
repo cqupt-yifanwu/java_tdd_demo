@@ -18,8 +18,7 @@ public class GuessNumberGame {
         return result;
     }
 
-    public GameStatus getStatus(String result) {
-
+    public GameStatus getStatus() {
         return gameStatus;
     }
 }

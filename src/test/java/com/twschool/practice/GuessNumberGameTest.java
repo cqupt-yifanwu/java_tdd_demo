@@ -10,7 +10,7 @@ public class GuessNumberGameTest {
         GuessNumberGame guessNumberGame = new GuessNumberGame(gameAnswer);
         String result = guessNumberGame.guess("1234");
 
-        GameStatus status = guessNumberGame.getStatus(result);
+        GameStatus status = guessNumberGame.getStatus();
 
         Assert.assertEquals(GameStatus.SUCCEED, status);
     }
@@ -21,7 +21,7 @@ public class GuessNumberGameTest {
         GuessNumberGame guessNumberGame = new GuessNumberGame(gameAnswer);
         String result = guessNumberGame.guess("1256");
 
-        GameStatus status = guessNumberGame.getStatus(result);
+        GameStatus status = guessNumberGame.getStatus();
 
         Assert.assertEquals(GameStatus.CONTINUE, status);
     }
