@@ -30,4 +30,22 @@ public class GameAnswerTest {
 
         Assert.assertEquals("1A1B", result);
     }
+
+    @Test
+    public void should_0A4B_given_gameAnswer_1234_userAnswer_4321() {
+        GameAnswer answer = new GameAnswer();
+
+        String result = answer.check("1234", "4321");
+
+        Assert.assertEquals("0A4B", result);
+    }
+
+    @Test
+    public void should_0A3B_given_gameAnswer_1234_userAnswer_4326() {
+        GameAnswer answer = new GameAnswer();
+
+        String result = answer.check("1234", "4326");
+
+        Assert.assertEquals("0A3B", result);
+    }
 }
