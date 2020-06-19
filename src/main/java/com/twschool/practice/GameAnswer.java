@@ -1,7 +1,31 @@
 package com.twschool.practice;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
+
 public class GameAnswer {
-    public String check(String i, String i1) {
-        return "4A0B";
+    public String check(String gameAnswer, String userAnswer) {
+        List<String> arrayUserAnswer = Arrays.asList(userAnswer.split(""));
+        List<String> arrayGameAnswer = Arrays.asList(gameAnswer.split(""));
+
+        int aNumber = 0;
+        int bNumber = 0;
+
+        for(int i = 0; i < arrayUserAnswer.size(); i++ ) {
+            String item = arrayUserAnswer.get(i);
+
+            if (gameAnswer.contains(item)) {
+                bNumber ++;
+            }
+
+            if (arrayGameAnswer.get(i).equals(arrayUserAnswer.get(i))) {
+                aNumber ++;
+            }
+        }
+
+        bNumber = bNumber - aNumber;
+
+        return aNumber + "A" + bNumber + "B";
     }
 }
