@@ -1,18 +1,18 @@
 package com.twschool.practice;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class MarsCar {
     private int coordinatesX;
     private int coordinatesY;
-    private String direction;
+    private Direction direction;
+    private MarsPosition position;
 
-    private List<String> directions = Arrays.asList("N", "W", "S", "E");
+//    private List<String> directions = Arrays.asList("N", "W", "S", "E");
 
     public MarsCar(MarsPosition marsPosition) {
+        this.position = marsPosition;
         this.coordinatesX = marsPosition.getCoordinatesX();
         this.coordinatesY = marsPosition.getCoordinatesY();
         this.direction = marsPosition.getDirection();
@@ -20,22 +20,21 @@ public class MarsCar {
 
     public void execute(List<String> args) {
         for(int index = 0; index < args.size(); index ++) {
-            int nowPos = directions.indexOf(direction);
             String command = args.get(index);
             if (command.equals("M")) {
-                if (direction.equals("N")) {
+                if (direction.equals(Direction.N)) {
                     coordinatesY += 1;
                 }
 
-                if (direction.equals("W")) {
+                if (direction.equals(Direction.W)) {
                     coordinatesX -= 1;
                 }
 
-                if (direction.equals("S")) {
+                if (direction.equals(Direction.S)) {
                     coordinatesY -= 1;
                 }
 
-                if (direction.equals("E")) {
+                if (direction.equals(Direction.E)) {
                     coordinatesX += 1;
                 }
 
@@ -43,19 +42,11 @@ public class MarsCar {
             }
 
             if (command.equals("L")) {
-                nowPos = nowPos + 1;
-
-                if (nowPos > 3) {
-                    nowPos = 0;
-                }
+                direction = direction.turnLeft();
             }
             if (command.equals("R")) {
-                nowPos = nowPos - 1;
-                if (nowPos < 0) {
-                    nowPos = 3;
-                }
+                direction = direction.turnRight();
             }
-            direction = directions.get(nowPos);
 
         }
     }
@@ -69,7 +60,7 @@ public class MarsCar {
         return coordinatesY;
     }
 
-    public String getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 }

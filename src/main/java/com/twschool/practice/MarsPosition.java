@@ -4,9 +4,9 @@ public class MarsPosition {
 
     private final int x;
     private final int y;
-    private final String direction;
+    private final Direction direction;
 
-    public MarsPosition(int x, int y, String direction) {
+    public MarsPosition(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
@@ -20,7 +20,7 @@ public class MarsPosition {
         return y;
     }
 
-    public String getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 }
