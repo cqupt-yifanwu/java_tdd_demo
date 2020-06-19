@@ -48,4 +48,13 @@ public class GameAnswerTest {
 
         Assert.assertEquals("0A3B", result);
     }
+
+    @Test
+    public void should_0A0B_given_gameAnswer_1234_userAnswer_4567() {
+        GameAnswer answer = new GameAnswer();
+
+        String result = answer.check("1234", "8567");
+
+        Assert.assertEquals("0A0B", result);
+    }
 }
