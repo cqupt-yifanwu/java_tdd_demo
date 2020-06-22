@@ -12,6 +12,10 @@ public class GameAnswer {
         this.gameAnswer = gameAnswer;
     }
 
+    public String getGameAnswer() {
+        return gameAnswer;
+    }
+
     public String check(String userAnswer) {
         List<String> arrayUserAnswer = Arrays.asList(userAnswer.split(""));
         List<String> arrayGameAnswer = Arrays.asList(gameAnswer.split(""));

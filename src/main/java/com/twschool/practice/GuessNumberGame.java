@@ -17,6 +17,7 @@ public class GuessNumberGame {
         if ("4A0B".equals(result)) {
             gameStatus = GameStatus.SUCCEED;
         } else if (leftTryTimes == 0) {
+            System.out.println("结束，正确答案是" + gameAnswer.getGameAnswer());
             gameStatus = GameStatus.FAILED;
         }
     }

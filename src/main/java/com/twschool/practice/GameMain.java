@@ -7,7 +7,7 @@ public class GameMain {
         System.out.println("开始游戏");
 
 //        初始化
-        String gameGenerator = new GameGenerator().getNumber();
+        String gameGenerator = new RandomGameGenerator().getNumber();
         GameAnswer gameAnswer = new GameAnswer(gameGenerator);
         GuessNumberGame guessNumberGame = new GuessNumberGame(gameAnswer);
 
