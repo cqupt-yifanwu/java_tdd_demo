@@ -5,8 +5,9 @@ public class GuessNumberGame {
     private GameStatus gameStatus = GameStatus.CONTINUE;
     private int leftTryTimes = 6;
 
-    public GuessNumberGame(GameAnswer gameAnswer) {
-        this.gameAnswer = gameAnswer;
+    public GuessNumberGame(GameGenerator gameGenerator) {
+        String randomGameAnswer = gameGenerator.getNumber();
+        this.gameAnswer = new GameAnswer(randomGameAnswer);
     }
 
     private void decreaseTryTimes() {
